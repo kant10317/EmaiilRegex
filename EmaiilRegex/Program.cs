@@ -21,9 +21,9 @@ namespace EmaiilRegex
 
             foreach (var email in emailAddresses)
             {
-                string key=@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-                string key2 = @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
-                Regex regex = new Regex(key2);
+                string regexRole=@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+                string regexRole2 = @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+                Regex regex = new Regex(regexRole2);
                 Match match = regex.Match(email);
                 if (match.Success)
                     Console.WriteLine(email + " is correct");
